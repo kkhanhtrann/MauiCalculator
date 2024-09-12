@@ -16,7 +16,7 @@ This is a basic calculator application developed using .NET MAUI. It supports ar
 
 ## Installation
 To run the application, ensure you have the following installed:
-- [.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/installation/) 
+- [.NET MAUI]([https://learn.microsoft.com/en-us/dotnet/maui/installation/](https://dotnet.microsoft.com/en-us/download)) 
 - .NET SDK 7.0 or later
 
 1. Clone the repository.
