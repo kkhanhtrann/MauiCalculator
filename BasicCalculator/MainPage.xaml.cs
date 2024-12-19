@@ -21,7 +21,16 @@ public partial class MainPage : ContentPage
     private void NumberClicked(object sender, EventArgs e)
     {
         Button button = (Button)sender;
+        if (button.Text == "ANS")
+        {
+            if (entry.Text.Length == 0)
+                entry.Text = entry.Text + button.Text;
+            else if (entry.Text[entry.Text.Length - 1] == '+' || entry.Text[entry.Text.Length - 1] == '-' || entry.Text[entry.Text.Length - 1] == 'x' || entry.Text[entry.Text.Length - 1] == '/')
+                entry.Text = entry.Text + button.Text;
+            return;
+        }
         entry.Text = entry.Text + button.Text;
+
     }
 
     private void FunctionClicked(object sender, EventArgs e)
@@ -30,7 +39,9 @@ public partial class MainPage : ContentPage
         switch (button.ClassId)
         {
             case "buttonDel":
-                entry.Text = entry.Text.Substring(0, entry.Text.Length - 1);
+                if (entry.Text[entry.Text.Length - 1] == 'S')
+                    entry.Text = entry.Text.Substring(0, entry.Text.Length - 3);
+                else entry.Text = entry.Text.Substring(0, entry.Text.Length - 1);
                 break;
             case "buttonAC":
                 entry.Text = "";
